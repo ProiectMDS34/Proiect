@@ -1,0 +1,64 @@
+﻿@model IEnumerable<GrupuriDeStudiuIP35.GRUPURI>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GrupurileMele</title>
+</head>
+<body>
+    <br />
+    <h2>Grupurile mele</h2>
+    <hr />
+    <p>
+        @Html.ActionLink("Creeaza grup", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nume)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tip)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descriere)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MATERII.Denumire)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nume)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tip)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descriere)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Data)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MATERII.Denumire)
+            </td>
+            <td>
+               
+                @Html.ActionLink("Deschide", "Deschide", new { id=item.Id })
+               
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

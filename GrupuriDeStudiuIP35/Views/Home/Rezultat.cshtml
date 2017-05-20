@@ -1,0 +1,70 @@
+﻿@model IEnumerable<GrupuriDeStudiuIP35.GRUPURI>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Rezultat</title>
+</head>
+<body>
+    <br />
+    <h2>Rezultate cautare</h2>
+    <hr />
+    
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nume)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Tip)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Descriere)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Data)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MATERII.Denumire)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nume)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Tip)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Descriere)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Data)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MATERII.Denumire)
+                    </td>
+                    <td>
+                        @if (true) //if (item.CERERIs.Status = "Pending")
+                        {
+
+                            @Html.ActionLink("Trimite cerere", "Trimite", new { id = item.Id }) }
+
+                        else
+                        {  // @Html.Label("CEVA")
+                        }
+
+
+                    </td>
+                </tr>
+            }
+
+        </table>
+</body>
+</html>

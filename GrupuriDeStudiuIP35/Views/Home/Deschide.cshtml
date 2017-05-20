@@ -1,0 +1,57 @@
+﻿@model IEnumerable<GrupuriDeStudiuIP35.GRUPURI>
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Grup</title>
+</head>
+<body>
+    <br />
+
+    <section>
+        @foreach (var item in Model)
+        {
+            if (item.Id.ToString() == Request.Url.Segments.Last())
+            {
+                <br />
+                <h2> @Html.DisplayFor(modelItem => item.Nume) </h2>
+                <hr />
+
+                <h4>
+                    <i> " @Html.DisplayFor(modelItem => item.Descriere) " </i>
+                </h4>
+                <br />
+                <p style="text-align:left">
+                    <b> An: </b>    @Html.DisplayFor(modelItem => item.MATERII.An)
+                </p>
+                <p style="text-align:left">
+                    <b> Specializare:  </b>   @Html.DisplayFor(modelItem => item.MATERII.Specializare)
+                </p>
+
+                <p style="text-align:left">
+                    <b>  Materie:  </b>  @Html.DisplayFor(modelItem => item.MATERII.Denumire)
+                </p>
+                <p style="text-align:left">
+                    <b> Profesor curs:  </b>   @Html.DisplayFor(modelItem => item.MATERII.ProfesorCurs)
+
+                </p>
+
+            }
+        }
+
+        <br />
+
+        <h4>  @Html.ActionLink("Discutii", "Forum", "Home") </h4>
+
+    </section>
+
+    <hr />
+    <div>
+
+    </div>
+</body>
+</html>
+

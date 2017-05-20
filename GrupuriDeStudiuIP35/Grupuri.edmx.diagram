@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7d0aecfb250e44d5b8d3a484020dd057" Name="Diagram1">
+        <EntityTypeShape EntityType="GrupuriDeStudiuModel.DISCUTII" Width="1.5" PointX="3" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GrupuriDeStudiuModel.GRUPURI" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GrupuriDeStudiuModel.MATERIALE" Width="1.5" PointX="6" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="GrupuriDeStudiuModel.MATERII" Width="1.5" PointX="1.5" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GrupuriDeStudiuModel.SUBIECTE" Width="1.5" PointX="3" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="GrupuriDeStudiuModel.sysdiagram" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GrupuriDeStudiuModel.UTILIZATORI" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GrupuriDeStudiuModel.APARTENENTA" Width="1.5" PointX="3" PointY="9.25" IsExpanded="true" />
+        <AssociationConnector Association="GrupuriDeStudiuModel.FK_DISCUTII_SUBIECTE" ManuallyRouted="false" />
+        <AssociationConnector Association="GrupuriDeStudiuModel.FK_DISCUTII_UTILIZATORI" ManuallyRouted="false" />
+        <AssociationConnector Association="GrupuriDeStudiuModel.FK_APARTENENTA_GRUPURI" ManuallyRouted="false" />
+        <AssociationConnector Association="GrupuriDeStudiuModel.FK_GRUPURI_MATERII" ManuallyRouted="false" />
+        <AssociationConnector Association="GrupuriDeStudiuModel.FK_MATERIALE_GRUPURI" ManuallyRouted="false" />
+        <AssociationConnector Association="GrupuriDeStudiuModel.FK_SUBIECTE_GRUPURI" ManuallyRouted="false" />
+        <AssociationConnector Association="GrupuriDeStudiuModel.FK_MATERIALE_UTILIZATORI" ManuallyRouted="false" />
+        <AssociationConnector Association="GrupuriDeStudiuModel.FK_SUBIECTE_UTILIZATORI" ManuallyRouted="false" />
+        <AssociationConnector Association="GrupuriDeStudiuModel.FK_APARTENENTA_UTILIZATORI" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="GrupuriDeStudiuModel.CERERI" Width="1.5" PointX="5.625" PointY="2.875" />
+        <AssociationConnector Association="GrupuriDeStudiuModel.FK_CERERI_GRUPURI" />
+        <AssociationConnector Association="GrupuriDeStudiuModel.FK_CERERI_UTILIZATORI" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
